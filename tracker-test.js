@@ -23,8 +23,16 @@ if (Meteor.isClient) {
   templateClass.onRendered(function() {
     React.render(React.createElement(HelloMessage, {name: "John"}), this.firstNode);
   });
+
+  // SIC
+
+  Template.hello2.onRendered(function() {
+    React.render(React.createElement(HelloMessage, {name: "Igor"}), this.firstNode);
+  })
+
 }
 
 if (Meteor.isServer) {
   Kadira.connect('oYLWc4o9kfyCdb69s', '46d8d21e-1b2b-44ba-b08d-1e225f88b4a6');
 }
+
